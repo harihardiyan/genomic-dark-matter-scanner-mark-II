@@ -26,7 +26,7 @@ Since this is a modern React application utilizing ES Modules and Import Maps, y
 ### Local Development
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/genomic-dark-matter-scanner.git
+    git clone https://github.com/harihardiyan/genomic-dark-matter-scanner-mark-II
     cd genomic-dark-matter-scanner
     ```
 2.  **Serve the files**:
