@@ -1,6 +1,11 @@
 # Genomic Dark Matter Deep-Scanner
 **Engine Version:** `JAX-Monolith Biophysical Core V4.0`
 
+## 🚀 Live Demo
+**URL:** [https://genomic-dark-matter-scanner-mark-ii.netlify.app/](https://genomic-dark-matter-scanner-mark-ii.netlify.app/)
+
+---
+
 The **Genomic Dark Matter Deep-Scanner** is a lightweight, client-side computational tool designed to explore the biophysical properties of non-coding DNA. Rather than relying solely on sequence alignment, this tool models DNA as a physical entity to identify potential regulatory "antennas" and structural anomalies through deterministic biophysical calculations.
 
 ## 🌟 Core Advantages
@@ -19,49 +24,33 @@ The scanner treats DNA not as a string of letters, but as a dynamic molecule gov
 3.  **Electronic Z-Scale Mapping**: Maps the electronic topology of sequences to predict conformational deviations.
 4.  **Mahalanobis-based Anomaly Detection**: Identifies outliers by calculating the statistical distance of a window's physical signature from the global mean.
 
-## 🚀 Getting Started (How to Run)
+## 🚀 Getting Started (How to Run Local)
 
-Since this is a modern React application utilizing ES Modules and Import Maps, you don't necessarily need a complex build step for local development.
-
-### Local Development
 1.  **Clone the repository**:
     ```bash
     git clone https://github.com/your-username/genomic-dark-matter-scanner.git
     cd genomic-dark-matter-scanner
     ```
-2.  **Serve the files**:
-    Because it uses ES Modules, you need to run it via a local web server.
-    *   Using **Node.js**: `npx serve .`
-    *   Using **Python**: `python -m http.server 8000`
-    *   Using **VS Code**: Use the "Live Server" extension.
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run development server**:
+    ```bash
+    npm run dev
+    ```
 
 ## ☁️ Deployment
 
-### Static Hosting (Recommended)
-This app is a pure frontend application. You can deploy it for free on **Vercel**, **Netlify**, or **GitHub Pages**.
-
-### Integration with Streamlit
-If you are a Python developer, you can embed it using an iframe:
-```python
-import streamlit.components.v1 as components
-components.iframe("https://your-scanner-url.vercel.app", height=800, scrolling=True)
-```
-
-## 🏷️ Recommended GitHub Topics (Tags)
-When creating your repository, add these tags to make it easier for other researchers to find:
-`genomics`, `bioinformatics`, `dna-biophysics`, `non-coding-dna`, `epigenetics`, `structural-biology`, `thermodynamics`, `jax-monolith`, `react`, `data-visualization`
-
-## ⚠️ Scope and Limitations
-
-*   **Predictive, Not Experimental**: This tool is a **computational lead generator**.
-*   **Static Modeling**: It calculates "potential energy" at a fixed state, not real-time atomic motion.
-*   **Validation Path**: Significant findings should be validated through **CD Spectroscopy**, **NMR**, or **ATAC-seq**.
+### Netlify
+Proyek ini sudah dikonfigurasi untuk Netlify menggunakan `netlify.toml`. Cukup hubungkan repositori ini ke Netlify, dan ia akan otomatis menjalankan `npm run build` dan mempublish folder `dist`.
 
 ## 🛠 Tech Stack
 
 *   **Frontend**: React 19 / TypeScript
 *   **Math/Physics**: JAX-Monolith Deterministic Engine
 *   **Visualization**: Recharts
+*   **Styling**: Tailwind CSS
 
 ## 📜 License
 
