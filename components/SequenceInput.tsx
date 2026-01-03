@@ -94,7 +94,7 @@ const SequenceInput: React.FC<Props> = ({ onScan, isLoading, isComparison }) => 
       <div className="mt-6 flex justify-between items-center">
         <div className="text-xs text-gray-500 flex items-center">
           <i className="fas fa-info-circle mr-2"></i>
-          Gunakan 'M' untuk merepresentasikan 5-Methylcytosine dalam simulasi epigenetik.
+          Use 'M' to represent 5-Methylcytosine in epigenetic simulations to analyze stability shifts.
         </div>
         <button
           onClick={handleSubmit}

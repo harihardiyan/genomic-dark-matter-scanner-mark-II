@@ -15,24 +15,24 @@ const DiagnosticReport: React.FC<Props> = ({ analysisWindow, onClose }) => {
   const topDrivers = analysisWindow.contributions.slice(0, 3);
   
   const getBiologicalHypothesis = (type: string, primaryDriver: string, archetype?: string) => {
-    let hypothesis = "Berdasarkan pemodelan biofisika sekuensial JAX-Monolith, wilayah ini menunjukkan karakteristik regulasi tinggi. ";
+    let hypothesis = "Based on JAX-Monolith biophysical sequence modeling, this region exhibits high regulatory potential. ";
     
     if (archetype === 'Triplex Potential') {
-      hypothesis += "Struktur Purine/Pyrimidine tract yang homogen mengindikasikan potensi pembentukan H-DNA (Triple-Helix). Wilayah ini sering berfungsi sebagai jangkar mekanis yang merekrut kompleks protein remodeler kromatin. ";
+      hypothesis += "The homogeneous Purine/Pyrimidine tract indicates a potential for H-DNA (Triple-Helix) formation. These regions often serve as mechanical anchors that recruit chromatin remodeler complexes. ";
     }
 
     if (primaryDriver === 'BENDABILITY') {
-      hypothesis += "Skor Bendabilitas yang tinggi mengindikasikan potensi wrapping nucleosome yang kuat, menunjukkan peran aktif dalam organisasi arsitektur 3D kromatin. ";
+      hypothesis += "The high Bendability score suggests a strong potential for nucleosome wrapping, indicating an active role in 3D chromatin architecture organization. ";
     }
 
     if (analysisWindow.sequence.includes('M')) {
-      hypothesis += "Adanya 5-Methylcytosine (M) meningkatkan stabilitas heliks secara termodinamika dan dapat memicu perekrutan protein Methyl-Binding Domain (MBD). ";
+      hypothesis += "The presence of 5-Methylcytosine (M) increases thermodynamic helix stability and may trigger the recruitment of Methyl-Binding Domain (MBD) proteins. ";
     }
 
     if (type === 'Thermal Dip' || primaryDriver === 'dG') {
-      hypothesis += "Karakteristik 'Melting Gate' terdeteksi, menunjukkan aksesibilitas termal tinggi untuk inisiasi transkripsi.";
+      hypothesis += "A 'Melting Gate' characteristic is detected, suggesting high thermal accessibility for transcription initiation.";
     } else if (type === 'Structural Shift' || primaryDriver.includes('Z')) {
-      hypothesis += "Pergeseran Z-Scale mengindikasikan deviasi konformasional dari heliks-B standar ke arah struktur melengkung (bent DNA).";
+      hypothesis += "Z-Scale shifts indicate a conformational deviation from standard B-helix toward a bent or strained DNA structure.";
     }
     return hypothesis;
   };
@@ -58,7 +58,7 @@ const DiagnosticReport: React.FC<Props> = ({ analysisWindow, onClose }) => {
 
         <div className="text-center border-b-2 border-slate-900 pb-8 mb-10">
           <h1 className="text-3xl font-bold tracking-tight mb-2 uppercase">Genomic Diagnostic Report</h1>
-          <p className="text-sm font-medium text-slate-500 uppercase tracking-widest">JAX-Monolith Biophysical Core V4.0 (Gold Standard)</p>
+          <p className="text-sm font-medium text-slate-500 uppercase tracking-widest">JAX-Monolith Biophysical Core V4.0 (Biophysical Core Engine)</p>
           <div className="mt-4 flex justify-center gap-8 text-[10px] font-mono text-slate-400">
             <span>TIMESTAMP: {new Date().toLocaleString()}</span>
             <span>ENGINE: DETERMINISTIC-NEAREST-NEIGHBOR</span>
@@ -71,7 +71,7 @@ const DiagnosticReport: React.FC<Props> = ({ analysisWindow, onClose }) => {
             <h2 className="text-lg font-bold border-l-4 border-slate-900 pl-3 uppercase tracking-wide">1. Methodology & Data Integrity</h2>
           </div>
           <p className="text-slate-700 leading-relaxed text-sm">
-            Analisis ini menggunakan mesin deterministik **V4.0** dengan parameter **SantaLucia (1998)**. Koreksi **von Ahsen [Mg2+]** diterapkan untuk akurasi stabilitas termal kation divalent. Pemodelan ini mengevaluasi DNA bukan sebagai string karakter, melainkan sebagai entitas fisik dengan energi *stacking* dan koordinat topologi elektronik yang nyata.
+            This analysis utilizes the **V4.0** deterministic engine with **SantaLucia (1998)** parameters. The **von Ahsen [Mg2+]** correction is applied for precise divalent cation thermal stability. This modeling treats DNA not as a string of characters, but as a physical entity with real stacking energy and electronic topology coordinates.
           </p>
         </section>
 
@@ -120,7 +120,7 @@ const DiagnosticReport: React.FC<Props> = ({ analysisWindow, onClose }) => {
               <i className="fas fa-flask mr-2"></i> Scientific Guidance & Validation Path
             </h2>
             <p className="text-blue-900/80 leading-relaxed text-xs italic">
-              Prediksi ini didasarkan pada perhitungan deterministik biofisika primer. Harap dicatat bahwa model ini merupakan prediktor probabilitas tinggi dan bukan pengganti metode observasi langsung. Langkah validasi yang disarankan:
+              These predictions are based on primary biophysical deterministic calculations. Please note that this model is a high-probability predictor and not a substitute for direct observation. Recommended validation steps:
             </p>
             <ul className="mt-3 grid grid-cols-2 gap-2 text-[10px] text-blue-900 font-semibold">
               <li className="flex items-center"><i className="fas fa-check-circle mr-2"></i> CD Spectroscopy (Helicity confirmation)</li>

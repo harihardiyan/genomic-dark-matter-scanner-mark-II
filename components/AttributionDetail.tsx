@@ -105,7 +105,7 @@ const AttributionDetail: React.FC<Props> = ({ window, onClose, onGenerateReport 
             <p className="text-[10px] text-purple-300 leading-relaxed italic">
               <i className="fas fa-brain mr-2"></i>
               Feature Attribution identifies <strong>{data[0].name}</strong> as the primary driver for this anomaly. 
-              {window.archetype === 'Triplex Potential' ? " Karakteristik Purine/Pyrimidine tract yang dominan mengindikasikan deviasi struktural menuju H-DNA, mengubah landscape interaksi protein-DNA di koordinat ini." : ""}
+              {window.archetype === 'Triplex Potential' ? " The dominant Purine/Pyrimidine tract characteristics indicate a structural deviation toward H-DNA, altering the DNA-protein interaction landscape at these coordinates." : ""}
               {data[0].name === 'BENDABILITY' ? " High bendability suggests a potential site for nucleosome positioning, directly influencing 3D chromatin folding." : ""}
             </p>
           </div>

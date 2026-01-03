@@ -30,7 +30,7 @@ Since this is a modern React application utilizing ES Modules and Import Maps, y
     cd genomic-dark-matter-scanner
     ```
 2.  **Serve the files**:
-    Because it uses ES Modules, you need to run it via a local web server (opening `index.html` directly in the browser may cause CORS issues).
+    Because it uses ES Modules, you need to run it via a local web server.
     *   Using **Node.js**: `npx serve .`
     *   Using **Python**: `python -m http.server 8000`
     *   Using **VS Code**: Use the "Live Server" extension.
@@ -38,18 +38,18 @@ Since this is a modern React application utilizing ES Modules and Import Maps, y
 ## ☁️ Deployment
 
 ### Static Hosting (Recommended)
-This app is a pure frontend application. You can deploy it for free on:
-*   **Vercel / Netlify**: Simply connect your GitHub repo. It will detect the `index.html` and serve it as a static site.
-*   **GitHub Pages**: Push your code to a `gh-pages` branch or configure GitHub Actions to deploy from the `main` branch.
+This app is a pure frontend application. You can deploy it for free on **Vercel**, **Netlify**, or **GitHub Pages**.
 
 ### Integration with Streamlit
-If you are a Python developer using **Streamlit** and want to include this scanner in your dashboard, you can embed it using an iframe:
+If you are a Python developer, you can embed it using an iframe:
 ```python
 import streamlit.components.v1 as components
-
-# After deploying the scanner to a URL (e.g., Vercel)
 components.iframe("https://your-scanner-url.vercel.app", height=800, scrolling=True)
 ```
+
+## 🏷️ Recommended GitHub Topics (Tags)
+When creating your repository, add these tags to make it easier for other researchers to find:
+`genomics`, `bioinformatics`, `dna-biophysics`, `non-coding-dna`, `epigenetics`, `structural-biology`, `thermodynamics`, `jax-monolith`, `react`, `data-visualization`
 
 ## ⚠️ Scope and Limitations
 
@@ -71,4 +71,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Author:** Hari Hardiyan  
 **Contact:** [lorozloraz@gmail.com](mailto:lorozloraz@gmail.com)  
-*Note: This project is intended for research and educational purposes. Use results to guide hypotheses, not as final diagnostic evidence.*
+*Note: This project is intended for research and educational purposes.*
