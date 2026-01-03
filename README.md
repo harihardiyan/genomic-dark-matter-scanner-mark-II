@@ -26,7 +26,7 @@ Since this is a modern React application utilizing ES Modules and Import Maps, y
 ### Local Development
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/harihardiyan/genomic-dark-matter-scanner-mark-II
+    git clone https://github.com/your-username/genomic-dark-matter-scanner.git
     cd genomic-dark-matter-scanner
     ```
 2.  **Serve the files**:
@@ -62,6 +62,10 @@ components.iframe("https://your-scanner-url.vercel.app", height=800, scrolling=T
 *   **Frontend**: React 19 / TypeScript
 *   **Math/Physics**: JAX-Monolith Deterministic Engine
 *   **Visualization**: Recharts
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
