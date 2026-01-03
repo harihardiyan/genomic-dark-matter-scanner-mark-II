@@ -1,0 +1,5 @@
+{
+  "name": "Genomic Dark Matter Deep-Scanner",
+  "description": "A deterministic biophysical DNA analysis engine (JAX-Monolith V4.0) for scanning structural anomalies, H-DNA potential, and physical regulatory signals.",
+  "requestFramePermissions": []
+}
