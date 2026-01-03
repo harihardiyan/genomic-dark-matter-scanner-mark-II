@@ -15,24 +15,47 @@ The **Genomic Dark Matter Deep-Scanner** is a lightweight, client-side computati
 The scanner treats DNA not as a string of letters, but as a dynamic molecule governed by the laws of thermodynamics:
 
 1.  **Deterministic Nearest-Neighbor (NN) Model**: Utilizes the widely accepted **SantaLucia (1998)** parameters to calculate enthalpy ($\Delta H$) and entropy ($\Delta S$) for every dinucleotide pair.
-2.  **Divalent Cation Correction**: Implements the **von Ahsen et al. (2001)** magnesium correction. This is crucial because $Mg^{2+}$ ions stabilize the DNA helix significantly more effectively than monovalent ions like $Na^{+}$.
-3.  **Electronic Z-Scale Mapping**: Maps the electronic topology of sequences to predict conformational deviations (e.g., shifts toward Z-DNA or bent DNA structures).
-4.  **Mahalanobis-based Anomaly Detection**: Identifies outliers by calculating the statistical distance of a window's physical signature from the global mean of the analyzed sequence.
+2.  **Divalent Cation Correction**: Implements the **von Ahsen et al. (2001)** magnesium correction.
+3.  **Electronic Z-Scale Mapping**: Maps the electronic topology of sequences to predict conformational deviations.
+4.  **Mahalanobis-based Anomaly Detection**: Identifies outliers by calculating the statistical distance of a window's physical signature from the global mean.
+
+## 🚀 Getting Started (How to Run)
+
+Since this is a modern React application utilizing ES Modules and Import Maps, you don't necessarily need a complex build step for local development.
+
+### Local Development
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/genomic-dark-matter-scanner.git
+    cd genomic-dark-matter-scanner
+    ```
+2.  **Serve the files**:
+    Because it uses ES Modules, you need to run it via a local web server (opening `index.html` directly in the browser may cause CORS issues).
+    *   Using **Node.js**: `npx serve .`
+    *   Using **Python**: `python -m http.server 8000`
+    *   Using **VS Code**: Use the "Live Server" extension.
+
+## ☁️ Deployment
+
+### Static Hosting (Recommended)
+This app is a pure frontend application. You can deploy it for free on:
+*   **Vercel / Netlify**: Simply connect your GitHub repo. It will detect the `index.html` and serve it as a static site.
+*   **GitHub Pages**: Push your code to a `gh-pages` branch or configure GitHub Actions to deploy from the `main` branch.
+
+### Integration with Streamlit
+If you are a Python developer using **Streamlit** and want to include this scanner in your dashboard, you can embed it using an iframe:
+```python
+import streamlit.components.v1 as components
+
+# After deploying the scanner to a URL (e.g., Vercel)
+components.iframe("https://your-scanner-url.vercel.app", height=800, scrolling=True)
+```
 
 ## ⚠️ Scope and Limitations
 
-To maintain scientific integrity, users should be aware of the following boundaries:
-
-*   **Predictive, Not Experimental**: This tool is a **computational lead generator**. It predicts where structural shifts *should* occur based on physics, but it does not replace experimental verification.
-*   **Static Modeling**: Unlike all-atom Molecular Dynamics (MD), this tool calculates "potential energy" at a fixed state. It does not simulate the real-time kinetic motion of atoms.
-*   **Requires Sequence Data**: This is not a sequencing tool. It requires pre-existing genomic data (FASTA/Text) to perform its analysis.
-*   **Validation Path**: Significant findings should always be validated through traditional "Gold Standard" methods such as **CD Spectroscopy**, **NMR**, or **ATAC-seq**.
-
-## 🎯 Use Cases
-
-*   **Lead Discovery**: Quickly scanning long non-coding regions to find "hotspots" for further MD simulation or wet-lab experiments.
-*   **Mutation Impact Studies**: Visualizing how a single base change or methylation event alters the local physical "texture" of the genome.
-*   **Educational Biophysics**: Demonstrating the relationship between DNA sequence, salt concentration, and thermodynamic stability.
+*   **Predictive, Not Experimental**: This tool is a **computational lead generator**.
+*   **Static Modeling**: It calculates "potential energy" at a fixed state, not real-time atomic motion.
+*   **Validation Path**: Significant findings should be validated through **CD Spectroscopy**, **NMR**, or **ATAC-seq**.
 
 ## 🛠 Tech Stack
 
