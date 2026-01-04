@@ -28,7 +28,9 @@ The scanner treats DNA not as a string of letters, but as a dynamic molecule gov
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/genomic-dark-matter-scanner.git
+    git clone https://github.com/harihardiyan/genomic-dark-matter-scanner-mark-II.git
+
+
     cd genomic-dark-matter-scanner
     ```
 2.  **Install dependencies**:
